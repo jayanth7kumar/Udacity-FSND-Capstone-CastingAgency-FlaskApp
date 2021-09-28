@@ -48,9 +48,9 @@ correctly connect to a local database
 - Here you can see this dict:
  ```python
 database_setup = {
-    "database_name_production" : "agency",
+    "database_name_production" : "Casting_Agency",
     "user_name" : "postgres", # default postgres user name
-    "password" : "testpassword123", # if applicable. If no password, just type in None
+    "password" : "root", # if applicable. If no password, just type in None
     "port" : "localhost:5432" # default postgres port
 }
 ```
@@ -96,7 +96,7 @@ Additionally, common pitfalls & error messages are explained, if applicable.
 
 ### Base URL
 
-**_https://artist-capstone-fsnd-matthew.herokuapp.com_**
+**_https://fsnd-capstone-jayanth-kumar.herokuapp.com/_**
 
 ### Authentification
 
@@ -141,7 +141,7 @@ Each ressource documentation is clearly structured:
 Query paginated actors.
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page1
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com//actors?page1
 ```
 - Fetches a list of dictionaries of examples in which the keys are the ids with all available fields
 - Request Arguments: 
@@ -174,7 +174,7 @@ $ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page1
 If you try fetch a page which does not have any actors, you will encounter an error which looks like this:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page123124
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors?page123124
 ```
 
 will return
@@ -193,7 +193,7 @@ will return
 Insert new actor into database.
 
 ```bash
-$ curl -X POST https://artist-capstone-fsnd-matthew.herokuapp.com/actors
+$ curl -X POST https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors
 ```
 
 - Request Arguments: **None**
@@ -219,7 +219,7 @@ If you try to create a new actor without a requiered field like `name`,
 it will throw a `422` error:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/actors?page123124
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors?page123124
 ```
 
 will return
@@ -238,7 +238,7 @@ will return
 Edit an existing Actor
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
+$ curl -X PATCH https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors/1
 ```
 
 - Request Arguments: **integer** `id from actor you want to update`
@@ -275,7 +275,7 @@ $ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
 If you try to update an actor with an invalid id it will throw an `404`error:
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/actors/125
+$ curl -X PATCH https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors/125
 ```
 
 will return
@@ -303,7 +303,7 @@ Additionally, trying to update an Actor with already existing field values will 
 Delete an existing Actor
 
 ```bash
-$ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
+$ curl -X DELETE https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors/1
 ```
 
 - Request Arguments: **integer** `id from actor you want to delete`
@@ -325,7 +325,7 @@ $ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/actors/1
 If you try to delete actor with an invalid id, it will throw an `404`error:
 
 ```bash
-$ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/actors/125
+$ curl -X DELETE https://fsnd-capstone-jayanth-kumar.herokuapp.com/actors/125
 ```
 
 will return
@@ -344,7 +344,7 @@ will return
 Query paginated movies.
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/movies?page1
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies?page1
 ```
 - Fetches a list of dictionaries of examples in which the keys are the ids with all available fields
 - Request Arguments: 
@@ -376,7 +376,7 @@ $ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/movies?page1
 If you try fetch a page which does not have any movies, you will encounter an error which looks like this:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/movies?page123124
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies?page123124
 ```
 
 will return
@@ -395,7 +395,7 @@ will return
 Insert new Movie into database.
 
 ```bash
-$ curl -X POST https://artist-capstone-fsnd-matthew.herokuapp.com/movies
+$ curl -X POST https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies
 ```
 
 - Request Arguments: **None**
@@ -419,7 +419,7 @@ If you try to create a new movie without a requiered field like `name`,
 it will throw a `422` error:
 
 ```bash
-$ curl -X GET https://artist-capstone-fsnd-matthew.herokuapp.com/movies?page123124
+$ curl -X GET https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies?page123124
 ```
 
 will return
@@ -438,7 +438,7 @@ will return
 Edit an existing Movie
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/movies/1
+$ curl -X PATCH https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies/1
 ```
 
 - Request Arguments: **integer** `id from movie you want to update`
@@ -473,7 +473,7 @@ $ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/movies/1
 If you try to update an movie with an invalid id it will throw an `404`error:
 
 ```bash
-$ curl -X PATCH https://artist-capstone-fsnd-matthew.herokuapp.com/movies/125
+$ curl -X PATCH https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies/125
 ```
 
 will return
@@ -501,7 +501,7 @@ Additionally, trying to update an Movie with already existing field values will 
 Delete an existing movie
 
 ```bash
-$ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/movies/1
+$ curl -X DELETE https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies/1
 ```
 
 - Request Arguments: **integer** `id from movie you want to delete`
@@ -523,7 +523,7 @@ $ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/movies/1
 If you try to delete movie with an invalid id, it will throw an `404`error:
 
 ```bash
-$ curl -X DELETE https://artist-capstone-fsnd-matthew.herokuapp.com/movies/125
+$ curl -X DELETE https://fsnd-capstone-jayanth-kumar.herokuapp.com/movies/125
 ```
 
 will return
@@ -548,7 +548,7 @@ All API Endpoints are decorated with Auth0 permissions. To use the project local
 2. Click on Applications Tab
 3. Create Application
 4. Give it a name like `Music` and select "Regular Web Application"
-5. Go to Settings and find `domain`. Copy & paste it into config.py => auth0_config['AUTH0_DOMAIN'] (i.e. replace `"example-matthew.eu.auth0.com"`)
+5. Go to Settings and find `domain`. Copy & paste it into config.py => auth0_config['AUTH0_DOMAIN'] (i.e. replace `"example-jayanth7kumar.eu.auth0.com"`)
 6. Click on API Tab 
 7. Create a new API:
    1. Name: `Music`
@@ -593,6 +593,6 @@ prepend `Bearer` to the token (seperated by space).
 For example: (Bearer token for `Executive Director`)
 ```js
 {
-    "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik16azVRVUk0TXpSR04wSXhOVU13TkRrME16QXdNMFpHTmtFMU1VWXdPRUpCTmpnMFJrVTBSZyJ9.eyJpc3MiOiJodHRwczovL2ZzbmQtbWF0dGhldy5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU0N2VmYzc2N2YxYmEwZWJiNDIwMTYzIiwiYXVkIjoiTXVzaWMiLCJpYXQiOjE1ODE4NjI0NjksImV4cCI6MTU4MTg2OTY2OSwiYXpwIjoiVGh2aG9mdmtkRTQwYlEzTkMzSzdKdFdSSzdSMzFOZDciLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImNyZWF0ZTphY3RvcnMiLCJjcmVhdGU6bW92aWVzIiwiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJlZGl0OmFjdG9ycyIsImVkaXQ6bW92aWVzIiwicmVhZDphY3RvcnMiLCJyZWFkOm1vdmllcyJdfQ.iScamWOFNx9pjiVZhsvPzDoRi6EraZaxWg-WMj80HNW_-dchkOymnKA7OOhPQ8svLc9-wViLlCT-ySnupZ-209cIBVHSA_slncSP-lzEM6NKbBmDEETTQ1oxv2jTH-JL72eLhyAWUsmSIZDmEab1hln1yWEN7mUnn0nZJfxCRCs89h5EGJzXS2v8PbAjq9Mu7wFsrioEMx_PGWzSM0r5WIrKBvpXRy0Jm-vssZl4M1akDHIL5Shcfp_Bfnarc2OLOMvdQVHVDEWhrbFSnfCENLDxkcmB18VnOedJAuY_C88YRUfY2wQAOPux8RVuqIb5KxTg4YP7kiDcBUKXEnhL9A"
+    "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlhVaDY3X2pacDJVMVRBYXZQSU1kdiJ9.eyJpc3MiOiJodHRwczovL2Rldi14aXdqZWFzeS5ldS5hdXRoMC5jb20vIiwic3ViIjoiS29FTENzVVhTVkdvWlUxMWg1QjlnR29MVG9WNkRJRDlAY2xpZW50cyIsImF1ZCI6Ik11c2ljIiwiaWF0IjoxNjMyODE2NDg1LCJleHAiOjE2MzI5MDI4ODUsImF6cCI6IktvRUxDc1VYU1ZHb1pVMTFoNUI5Z0dvTFRvVjZESUQ5Iiwic2NvcGUiOiJyZWFkOmFjdG9ycyBjcmVhdGU6YWN0b3JzIGVkaXQ6YWN0b3JzIGRlbGV0ZTphY3RvcnMgcmVhZDptb3ZpZXMgY3JlYXRlOm1vdmllcyBlZGl0Om1vdmllcyBkZWxldGU6bW92aWVzIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwicGVybWlzc2lvbnMiOlsicmVhZDphY3RvcnMiLCJjcmVhdGU6YWN0b3JzIiwiZWRpdDphY3RvcnMiLCJkZWxldGU6YWN0b3JzIiwicmVhZDptb3ZpZXMiLCJjcmVhdGU6bW92aWVzIiwiZWRpdDptb3ZpZXMiLCJkZWxldGU6bW92aWVzIl19.TqVwWHyfNDem_h09wVR2mcIBZkwk7BrXpveFGE8vf2JP57YlVLmaSmsLrvzqNPTGj3hZAus9SF2CSb4HPINt1kgLMb_spc6hvyHy9a8nkOujnEOxkhfAQcnGO33g6PdFRI1GgduY40Iptsm5iYMRz4uA_IwNMnP9ds1KRnwPSCRMQGKbC-nTC65ltdPtJ8UtFNz9myJz_c1bpBzFyX2XuvrCueTAuYTQpFa7TDQmInf9PYZQTvEZ8uw232RbSI336WgUyb1tm_ipKBSvyk72VdFYEWFtQfbp0XYSVUv7ODeFYr6enrMVSkf0SipXlAh-3ULugdDARntHXHdwjBgK3w"
 }
 ```
