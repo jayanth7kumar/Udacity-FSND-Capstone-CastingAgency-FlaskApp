@@ -16,6 +16,7 @@ from config import database_setup
 database_path = os.environ.get('DATABASE_URL')
 db = SQLAlchemy()
 
+
 def setup_db(app, database_path=database_path):
     '''binds a flask application and a SQLAlchemy service'''
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
@@ -28,7 +29,7 @@ def db_drop_and_create_all():
     '''drops the database tables and starts fresh
     can be used to initialize a clean database
     '''
-    db.drop_all()
+    #db.drop_all()
     db.create_all()
     db_init_records()
 
@@ -43,7 +44,7 @@ def db_init_records():
 
     new_movie = (Movie(
         title = 'Matthew first Movie',
-        release_date = date.today()
+        release_date = int(date.today().strftime('%Y%m%d'))
         ))
 
     new_performance = Performance.insert().values(
@@ -87,6 +88,7 @@ class Actor(db.Model):
 
   def insert(self):
     db.session.add(self)
+    db.session.rollback()
     db.session.commit()
   
   def update(self):
